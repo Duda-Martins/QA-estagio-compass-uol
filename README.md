@@ -119,4 +119,4 @@ Os instrutores e Scrum Masters foram fundamentais para o direcionamento técnico
 
 Meu nome é **Duda Martins**, sou estudante de QA e atualmente estagiando na **Compass UOL**. Gosto de trabalhar com organização, raciocínio lógico, foco em qualidade desde o planejamento até a entrega e aprendizado contínuo.
 
-📬 Me encontre no [LinkedIn](https://www.linkedin.com/in/duda-martins/) para trocar experiências!
+📬 Me encontre no [LinkedIn](https://www.linkedin.com/in/maria-eduarda-martins-rodrigues-564335349/) para trocar experiências!
