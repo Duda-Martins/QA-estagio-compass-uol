@@ -1,0 +1,1156 @@
+{
+	"info": {
+		"_postman_id": "79715801-7d7e-45f1-80b7-495df93487f8",
+		"name": "Testes da API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44546137",
+		"_collection_link": "https://mariaeduarda-3437190.postman.co/workspace/API-ServeRest---Challenge~7b43e5a1-1343-4418-b1f0-8a605e3e1d03/collection/44546137-79715801-7d7e-45f1-80b7-495df93487f8?action=share&source=collection_link&creator=44546137"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar usuario",
+					"item": [
+						{
+							"name": "Listar usuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Buscar usuario por ID",
+					"item": [
+						{
+							"name": "Buscar usuario por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/usuarios/{{id-usuario-busca-valido}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios",
+										"{{id-usuario-busca-valido}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cadastrar usuario",
+					"item": [
+						{
+							"name": "Valido -Adm",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastrar-usuario-valido}}\",\r\n  \"email\": \"{{email-cadastrar-usuario-valido}}\",\r\n  \"password\": \"{{senha-cadastrar-usuario-valido}}\",\r\n  \"administrador\": \"{{boolean-adm-cadastrar-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "E-mail existente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastrar-usuario-valido}}\",\r\n  \"email\": \"{{email-cadastrar-usuario-valido}}\",\r\n  \"password\": \"{{senha-cadastrar-usuario-valido}}\",\r\n  \"administrador\": \"{{boolean-adm-cadastrar-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Valido - Comum",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastrar-usuario-valido-comum}}\",\r\n  \"email\": \"{{email-cadastrar-usuario-valido-comum}}\",\r\n  \"password\": \"{{senha-cadastrar-usuario-valido}}\",\r\n  \"administrador\": \"{{boolean-adm-cadastrar-valido-comum}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invalido senha curta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastrar-usuario-invalido-senha}}\",\r\n  \"email\": \"{{email-cadastrar-usuario-invalido-senha}}\",\r\n  \"password\": \"{{senha-cadastrar-usuario-invalido-senha}}\",\r\n  \"administrador\": \"{{boolean-adm-cadastrar-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invalido e-mail domínio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastrar-usuario-invalido-e-mail}}\",\r\n  \"email\": \"{{email-cadastrar-usuario-invalido-e-mail}}\",\r\n  \"password\": \"{{senha-cadastrar-usuario-invalido-e-mail}}\",\r\n  \"administrador\": \"{{boolean-adm-cadastrar-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir usuario",
+					"item": [
+						{
+							"name": "Excluir usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/usuarios/{{id-excluir-usuario}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios",
+										"{{id-excluir-usuario}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Editar usuario",
+					"item": [
+						{
+							"name": "Criar usuário inexistente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-editar-usuario-cadastrar}}\",\r\n  \"email\": \"{{email-editar-usuario-cadastrar}}\",\r\n  \"password\": \"{{senha-editar-usuario-cadastrar}}\",\r\n  \"administrador\": \"{{boolean-adm-editar-cadastrar}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/usuarios/{{id-editar-usuario-cadastrar}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"usuarios",
+										"{{id-editar-usuario-cadastrar}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "Gerencie os usuários, consulte dados para login e cadastre administrador."
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Fazer login",
+					"item": [
+						{
+							"name": "Usuario inexistente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{email-login-inexistente}}\",\r\n    \"password\": \"{{senha-teste-inexistente}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/login",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Usuario valido senha errada",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{email-cadastrar-usuario-valido}}\",\r\n    \"password\": \"{{senha-teste-errada}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/login",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Valido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{email-cadastrar-usuario-valido}}\",\r\n    \"password\": \"{{senha-cadastrar-usuario-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/login",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Valido - Comum",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{email-cadastrar-usuario-valido-comum}}\",\r\n    \"password\": \"{{senha-cadastrar-usuario-valido}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/login",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "Autentique o seu usuário para montar um carrinho e, se for administrador, gerenciar os produtos."
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Listar produtos",
+					"item": [
+						{
+							"name": "Sem token",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Buscar produto por ID",
+					"item": [
+						{
+							"name": "Sem token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/produtos/{{id-busca-produtos}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos",
+										"{{id-busca-produtos}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cadastrar produto",
+					"item": [
+						{
+							"name": "Sem ser adm",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbXVtQGVtcHJlc2EuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE3NDY3MzIwOTEsImV4cCI6MTc0NjczMjY5MX0.ii0_UqRSc38roIG4dfLkaCMIQSpz39Ml5JzWWHQ3u5E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastra-produto}}\",\r\n  \"preco\": \"{{preco-cadastra}}\",\r\n  \"descricao\": \"{{descricao-cadastra}}\",\r\n  \"quantidade\": \"{{quantidade-cadastra}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Numero quebrado",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzMyNTEzLCJleHAiOjE3NDY3MzMxMTN9.igsrTMEPWHb663-mfsFuXYHR3pAHR2nFB46dvP-HmmQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastra-produto}}\",\r\n  \"preco\": \"{{preco-cadastra-quebrado}}\",\r\n  \"descricao\": \"{{descricao-cadastra}}\",\r\n  \"quantidade\": \"{{quantidade-cadastra}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Valido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzMyNTEzLCJleHAiOjE3NDY3MzMxMTN9.igsrTMEPWHb663-mfsFuXYHR3pAHR2nFB46dvP-HmmQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-cadastra-produto}}\",\r\n  \"preco\": \"{{preco-cadastra}}\",\r\n  \"descricao\": \"{{descricao-cadastra}}\",\r\n  \"quantidade\": \"{{quantidade-cadastra}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir produto",
+					"item": [
+						{
+							"name": "Excluir produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/produtos/{{id-deleta-produto}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos",
+										"{{id-deleta-produto}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Editar produto",
+					"item": [
+						{
+							"name": "Valido - criar",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzM1MDY1LCJleHAiOjE3NDY3MzU2NjV9.in83rfrlYkoIu4SV-M5U_hbOJ2UD2klDXrpFq4UrnoU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-editar-produto-criar}}\",\r\n  \"preco\": \"{{preco-editar-criar}}\",\r\n  \"descricao\": \"{{descricao-editar-criar}}\",\r\n  \"quantidade\": \"{{quantidade-editar-criar}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos/{{id-editar-produto-criar}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos",
+										"{{id-editar-produto-criar}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Valido - criar 16 digitos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzM1MDY1LCJleHAiOjE3NDY3MzU2NjV9.in83rfrlYkoIu4SV-M5U_hbOJ2UD2klDXrpFq4UrnoU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nome\": \"{{nome-editar-produto-criar}}\",\r\n  \"preco\": \"{{preco-editar-criar}}\",\r\n  \"descricao\": \"{{descricao-editar-criar}}\",\r\n  \"quantidade\": \"{{quantidade-editar-criar}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/produtos/{{id-editar-produto-criar}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"produtos",
+										"{{id-editar-produto-criar}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "Consulte produtos cadastrados ou, como administrador, gerencie os produtos da loja."
+		},
+		{
+			"name": "Carrinhos",
+			"item": [
+				{
+					"name": "Listar carrinhos cadastrados",
+					"item": [
+						{
+							"name": "Listar carrinhos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/carrinhos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Buscar carrinho por ID",
+					"item": [
+						{
+							"name": "Buscar carrinho por ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_base}}/carrinhos/{{id-busca-carrinho}}",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos",
+										"{{id-busca-carrinho}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cadastrar carrinho",
+					"item": [
+						{
+							"name": "Valido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbXVtQGVtcHJlc2EuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE3NDY3MzMwNzMsImV4cCI6MTc0NjczMzY3M30.jofFx0UxaRaBSBueYW608Qhe8lwX__XFS6T38IGbUzk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{id-produto1-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade1-carrinho}}\"\r\n    },\r\n    {\r\n      \"idProduto\": \"{{id-produto2-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade2-carrinho}}\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/carrinhos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Usuario ja tem carrinho",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbXVtQGVtcHJlc2EuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE3NDY3MzMwNzMsImV4cCI6MTc0NjczMzY3M30.jofFx0UxaRaBSBueYW608Qhe8lwX__XFS6T38IGbUzk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{id-produto1-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade1-carrinho}}\"\r\n    },\r\n    {\r\n      \"idProduto\": \"{{id-produto2-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade2-carrinho}}\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/carrinhos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Id produto inexistente",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzM0MTQ5LCJleHAiOjE3NDY3MzQ3NDl9.ckEdNQ_d4L9S5_QHB2h7dxNKtLyK28WmrrxcgDDx2LM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{id-produto1-carrinho-inexistente}}\",\r\n      \"quantidade\": \"{{quantidade1-carrinho}}\"\r\n    },\r\n    {\r\n      \"idProduto\": \"{{id-produto2-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade2-carrinho}}\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/carrinhos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto sem estoque",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbXVtQGVtcHJlc2EuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE3NDY3MzQ3MzYsImV4cCI6MTc0NjczNTMzNn0.fjWjMfO2ggVS4Ws8fLk-ALASgZgI_R3RIi6FoubedVQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"{{id-produto1-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade1-carrinho-maior}}\"\r\n    },\r\n    {\r\n      \"idProduto\": \"{{id-produto2-carrinho}}\",\r\n      \"quantidade\": \"{{quantidade2-carrinho}}\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_base}}/carrinhos",
+									"host": [
+										"{{url_base}}"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir carrinho",
+					"item": [
+						{
+							"name": "Concluindo a compra",
+							"item": [
+								{
+									"name": "Valido",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhbGlkb0BlbXByZXNhLmNvbSIsInBhc3N3b3JkIjoiMTIzNDU2IiwiaWF0IjoxNzQ2NzM0OTAzLCJleHAiOjE3NDY3MzU1MDN9.qJv-5YPjkg-EWHQqo2ozoNqM0hvE6jvjCheXqbbyb_Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url_base}}/carrinhos/concluir-compra",
+											"host": [
+												"{{url_base}}"
+											],
+											"path": [
+												"carrinhos",
+												"concluir-compra"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Cancelando a compra",
+							"item": [
+								{
+									"name": "Comum",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbXVtQGVtcHJlc2EuY29tIiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE3NDY3MzQ1MDksImV4cCI6MTc0NjczNTEwOX0.WQIOinNsdQ-x2uv3JlaY3W8Jix_4ieNNe7brmW2TXcM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{url_base}}/carrinhos/cancelar-compra",
+											"host": [
+												"{{url_base}}"
+											],
+											"path": [
+												"carrinhos",
+												"cancelar-compra"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "Retorna produtos para estoque."
+						}
+					]
+				}
+			],
+			"description": "Consulte os carrinhos cadastrados, faça um para o seu usuário e, no final, desista da compra pois estava só dando uma olhadinha."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"console.log(pm.info.requestName)"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {\r",
+					"    pm.response.to.have.status(200);\r",
+					"});\r",
+					"\r",
+					"pm.test(\"Response time is less than 300ms\", function () {\r",
+					"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "nome-cadastrar-usuario-valido",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-cadastrar-usuario-valido",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-cadastrar-usuario-valido",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "boolean-adm-cadastrar-valido",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "id-editar-usuario-cadastrar",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "nome-editar-usuario-cadastrar",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-editar-usuario-cadastrar",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-editar-usuario-cadastrar",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "boolean-adm-editar-cadastrar",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-login-inexistente",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-teste-inexistente",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-teste-errada",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "boolean-adm-cadastrar-valido-comum",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-cadastrar-usuario-valido-comum",
+			"value": "comum@empresa.com",
+			"type": "default"
+		},
+		{
+			"key": "nome-cadastrar-usuario-valido-comum",
+			"value": "Comum",
+			"type": "default"
+		},
+		{
+			"key": "descricao-cadastra",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "preco-cadastra",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "quantidade-cadastra",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "nome-cadastra-produto",
+			"value": "Produto Teste",
+			"type": "default"
+		},
+		{
+			"key": "preco-cadastra-quebrado",
+			"value": "90.99",
+			"type": "default"
+		},
+		{
+			"key": "id-produto1-carrinho",
+			"value": "7IPVDhKPil7ZAPGg",
+			"type": "default"
+		},
+		{
+			"key": "quantidade1-carrinho",
+			"value": "2",
+			"type": "default"
+		},
+		{
+			"key": "id-produto2-carrinho",
+			"value": "7pMiiBd0M1N3kPtY",
+			"type": "default"
+		},
+		{
+			"key": "quantidade2-carrinho",
+			"value": "7",
+			"type": "default"
+		},
+		{
+			"key": "id-produto1-carrinho-inexistente",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "quantidade1-carrinho-maior",
+			"value": "4",
+			"type": "default"
+		},
+		{
+			"key": "id-editar-produto-criar",
+			"value": "p999",
+			"type": "default"
+		},
+		{
+			"key": "nome-editar-produto-criar",
+			"value": "Produto Y",
+			"type": "default"
+		},
+		{
+			"key": "preco-editar-criar",
+			"value": "33",
+			"type": "default"
+		},
+		{
+			"key": "descricao-editar-criar",
+			"value": "Novo produto",
+			"type": "default"
+		},
+		{
+			"key": "quantidade-editar-criar",
+			"value": "5",
+			"type": "default"
+		},
+		{
+			"key": "nome-cadastrar-usuario-invalido-senha",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-cadastrar-usuario-invalido-senha",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-cadastrar-usuario-invalido-senha",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "nome-cadastrar-usuario-invalido-e-mail",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "email-cadastrar-usuario-invalido-e-mail",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "senha-cadastrar-usuario-invalido-e-mail",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

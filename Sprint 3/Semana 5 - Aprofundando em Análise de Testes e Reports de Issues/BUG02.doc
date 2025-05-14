@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#N1RDB-19] Quantidade de item no carrinho não pode ser alterada</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://wesleycassiosp.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://wesleycassiosp.atlassian.net/browse/N1RDB-15">Relatório de BUG - Maria Eduarda</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://wesleycassiosp.atlassian.net/browse/N1RDB-15">N1RDB-15</a>)</span>
+                <h3 class="formtitle"><img src="https://wesleycassiosp.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [N1RDB-19]&nbsp;<a href="https://wesleycassiosp.atlassian.net/browse/N1RDB-19">Quantidade de item no carrinho não pode ser alterada</a>
+            <span class="subText">
+               Criado: 15/abr/25                   &nbsp;Atualizado(a): 16/abr/25
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Em andamento</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Projeto:</b></td>
+        <td width="80%"><a href="https://wesleycassiosp.atlassian.net/secure/BrowseProject.jspa?id=10033">Nexus 101 - Report de Bugs</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Componentes:</b></td>
+            <td>
+                            Nenhum
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versões afetadas:</b></td>
+            <td>
+                            Nenhum
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Versões corrigidas:</b></td>
+            <td>
+                            Nenhum
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Pai:</b></td>
+        <td width="80%"><a href="https://wesleycassiosp.atlassian.net/browse/N1RDB-15">Relatório de BUG - Maria Eduarda</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Tipo:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Bug
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Prioridade:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Relator:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="5e9b09037bc0680c2cd12e21"
+                id="word_reporter_5e9b09037bc0680c2cd12e21"
+                href="https://wesleycassiosp.atlassian.net/secure/ViewProfile.jspa?accountId=5e9b09037bc0680c2cd12e21">
+                    Maria Eduarda Martins Rodrigues
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Responsável:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="5e9b09037bc0680c2cd12e21"
+                id="word_assignee_5e9b09037bc0680c2cd12e21"
+                href="https://wesleycassiosp.atlassian.net/secure/ViewProfile.jspa?accountId=5e9b09037bc0680c2cd12e21">
+                    Maria Eduarda Martins Rodrigues
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolução:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Não resolvido(s)
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votos:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Categorias:</b>
+        </td>
+        <td id="labels-10051-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Frontend, Funcional, carrinho, ecommerce                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Estimativa de trabalho restante:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Desconhecido
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Tempo gasto:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Desconhecido
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Estimativa original:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Desconhecido
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Anexos:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://wesleycassiosp.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="Arquivo PNG">
+                    image-20250415-193816.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Links de itens:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Blocks</b><br/>
+                            </td>
+                        </tr>
+                                    <tr>
+            <td>
+                blocks
+            </td>
+            <td>
+                <a href="https://wesleycassiosp.atlassian.net/browse/N1RDB-17">
+                     N1RDB-17                 </a>
+            </td>
+            <td>
+                Editar a quantidade no carrinho de co...
+            </td>
+            <td>
+                Tarefas pendentes
+            </td>
+        </tr>
+                                                                    </table>
+            </td>
+        </tr>
+    
+
+
+    
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-10051-value" class="value" bgcolor="#ffffff" width="80%">      0|i0003j:
+  </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Descrição</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p><b><span class="error">&#91;*N1RDB-19&#93;</span> *| Quantidade de item no carrinho não é atualizada</b><br/>
+(E-commerce - Módulo de Carrinho de Compras)<br/>
+Tags Técnicas<br/>
+#frontend #ecommerce #carrinho #Alta #Funcional</p>
+
+<hr />
+
+<h3><a name="Descri%C3%A7%C3%A3oDetalhada"></a>Descrição Detalhada</h3>
+
+<p>Ao editar manualmente a quantidade de um item no carrinho de compras, há opção de alterar. Essa falha impede que o usuário ajuste sua compra de forma intuitiva, o que quebra o fluxo esperado de finalização e fere os requisitos da história 
+    <span class="jira-issue-macro" data-jira-key="N1RDB-17" >
+                <a href="https://wesleycassiosp.atlassian.net/browse/N1RDB-17" class="jira-issue-macro-key issue-link"  title="Editar a quantidade no carrinho de compras" >
+            <img class="icon" src="https://wesleycassiosp.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" />
+            N1RDB-17
+        </a>
+                                                    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+            </span>
+. A falha impacta diretamente na experiência de compra e pode gerar desistência da compra.</p>
+
+<hr />
+
+<h3><a name="PassosparaReproduzir"></a>Passos para Reproduzir</h3>
+
+<ol>
+	<li>Acessar o site e adicionar um ou mais produtos ao carrinho.</li>
+	<li>Navegar até a página do carrinho.</li>
+	<li>Clicar no botão onde a quantodade do produto aparece → Nenhuma aleração ocorre.</li>
+</ol>
+
+
+<hr />
+
+<h3><a name="ResultadoEsperado"></a>Resultado Esperado</h3>
+
+<p>O sistema deve permitir a atualização da quantidade, recalcular o subtotal do item e o total geral do carrinho.</p>
+
+<hr />
+
+<h3><a name="ResultadoObtido"></a>Resultado Obtido</h3>
+
+<p>Não aparece opção de digitar ou um botão de almentar e diminuir a quantidade. Não há atualização dos totais, nem envio da atualização para a API.</p>
+
+<hr />
+
+<h3><a name="Compara%C3%A7%C3%A3oEsperadovs.Obtido"></a>Comparação Esperado vs. Obtido</h3>
+
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'>Item</th>
+<th class='confluenceTh'>Esperado</th>
+<th class='confluenceTh'>Obtido</th>
+</tr>
+<tr>
+<td class='confluenceTd'>Clicando na quantidade</td>
+<td class='confluenceTd'>Abre a opção de digitar ou setas para almentar e diminuir a quantidade</td>
+<td class='confluenceTd'>Não acontece nada</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<hr />
+
+<h3><a name="Evid%C3%AAncias"></a>Evidências</h3>
+
+<ul>
+	<li><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10001" alt="image-20250415-193816.png" height="606" width="1366" style="border: 0px solid black" /></span><br/>
+ – Botão que não pode ser alterado.</li>
+</ul>
+
+
+<hr />
+
+<h3><a name="Gravidade"></a>Gravidade</h3>
+
+<p><b>Alta</b><br/>
+<em>Justificativa:</em> O bug impede a funcionalidade principal do carrinho, que é permitir ajustes nas quantidades dos itens. Impacta diretamente na finalização da compra e na conversão de vendas.</p>
+
+<hr />
+
+<h3><a name="Prioridade"></a>Prioridade</h3>
+
+<p><b>Alta</b><br/>
+<em>Justificativa:</em> Recurso essencial para o funcionamento do carrinho. O bug afeta testes integrados e deve ser corrigido antes de avançar para deploy ou novos testes.</p>
+
+<hr />
+
+<h3><a name="AmbientedeTeste"></a>Ambiente de Teste</h3>
+
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'>Parâmetro</th>
+<th class='confluenceTh'>Valor</th>
+</tr>
+<tr>
+<td class='confluenceTd'>Sistema Operacional</td>
+<td class='confluenceTd'>Windows 10</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Navegador</td>
+<td class='confluenceTd'>Chrome 124.0.6367.91</td>
+</tr>
+<tr>
+<td class='confluenceTd'>API ou Interface</td>
+<td class='confluenceTd'><tt><a href="https://automationexercise.com/view_cart" class="external-link" rel="nofollow noreferrer">https://automationexercise.com/view_cart</a></tt> - Página do Carrinho</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Tipo de Teste</td>
+<td class='confluenceTd'>Funcional</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Ferramenta</td>
+<td class='confluenceTd'>DevTools e Manual</td>
+</tr>
+<tr>
+<td class='confluenceTd'>Data e Hora</td>
+<td class='confluenceTd'>15/04/2025 - 14:32</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<hr />
+
+<h3><a name="Observa%C3%A7%C3%B5esT%C3%A9cnicas"></a>Observações Técnicas</h3>
+
+<h4><a name="InsightsdeMelhoria%3A"></a><b>Insights de Melhoria:</b></h4>
+
+<ul>
+	<li>Abrir o campo desse botão para que ele receba novos valores;</li>
+	<li>Ter setas para cima e para baixo para facilitar a mudança de quantidade e tornar mais visual para o cliente;</li>
+	<li>Calcular automaticamente a alteração de preços por cousa da quantidade;</li>
+	<li>Adicionar validação imediata no campo de quantidade para garantir que apenas valores válidos sejam permitidos.</li>
+</ul>
+
+
+<hr />
+
+<h3><a name="Respons%C3%A1vel"></a>Responsável</h3>
+
+<p>Maria Eduarda Rodrigues.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+Gerado em Mon May 12 19:57:46 UTC 2025 por Maria Eduarda Martins Rodrigues usando JIRA 1001.0.0-SNAPSHOT#100283-rev:ae90960f6ce4b93d8be8d846e57df479663fa457.
+
+</body>
+</html>
