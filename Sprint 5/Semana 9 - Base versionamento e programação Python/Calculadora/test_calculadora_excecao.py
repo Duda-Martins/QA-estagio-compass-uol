@@ -4,10 +4,12 @@ from calculadora import Calculadora
 # Criar uma instância da classe
 calculadora = Calculadora()
 
+@pytest.mark.excecao
 def test_divisao_por_zero():
     with pytest.raises(ZeroDivisionError):
         calculadora.divisao(30,0)
 
+@pytest.mark.excecao
 def test_divisao_por_zero2():
     with pytest.raises(ZeroDivisionError) as exec_info:
         calculadora.divisao(30,0)
