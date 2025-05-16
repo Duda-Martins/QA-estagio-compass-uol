@@ -1,1 +1,1 @@
-
+Você deverá colocar em prática os conhecimentos adquidos relacionados a Python e TDD. Para isto, deverá criar uma classe chamada Calculadora, e deverá iniciar a criação de testes unitários e depois a implementação dos métodos da calculadora para que os testes passem. Desta forma, você estará colocando em prática o desenvolvimento guiado por testes, e garantindo uma cobertura de testes durante sua implementação.
