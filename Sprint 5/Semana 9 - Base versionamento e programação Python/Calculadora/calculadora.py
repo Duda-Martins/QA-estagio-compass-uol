@@ -1,7 +1,6 @@
 # Copiei o esqueleto da classe do Gemini.
 
 class Calculadora:
-    # Define atributos e métodos aqui
     def __init__(self):
         pass
 
@@ -18,6 +17,9 @@ class Calculadora:
         return resultado
     
     def divisao(self, n1, n2):
+        # Mensagem de erro tirada do curso de pytest.
+        if n2 == 0:
+            raise ZeroDivisionError("Não é possível dividir por zero.")
         resultado = n1 / n2
         return resultado
     
