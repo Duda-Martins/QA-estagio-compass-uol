@@ -2,13 +2,29 @@
 
 class Calculadora:
     # Define atributos e métodos aqui
-    # def __init__(self, atributo1, atributo2):
-    #     self.atributo1 = atributo1
-    #     self.atributo2 = atributo2
+    def __init__(self):
+        pass
 
-    def soma(self):
-        # Código do método
-        # pass
+    def soma(self, n1, n2):
+        resultado = n1 + n2
+        return resultado
 
-# Criar uma instância da classe
-objeto = Calculadora("valor do atributo1", "valor do atributo2")
+    def subtracao(self, n1, n2):
+        resultado = n1 - n2
+        return resultado
+    
+    def multiplicacao(self, n1, n2):
+        resultado = n1 * n2
+        return resultado
+    
+    def divisao(self, n1, n2):
+        resultado = n1 / n2
+        return resultado
+    
+    def potenciacao(self, n1, n2):
+        resultado = n1 ** n2
+        return resultado
+    
+    def media(self, n1, n2):
+        resultado = (n1 + n2) / 2
+        return resultado
