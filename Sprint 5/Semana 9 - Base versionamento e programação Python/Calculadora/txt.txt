@@ -1,1 +1,27 @@
+Você deverá colocar em prática os conhecimentos adquidos relacionados a Python e TDD. Para isto, deverá criar uma classe chamada Calculadora, e deverá iniciar a criação de testes unitários e depois a implementação dos métodos da calculadora para que os testes passem. Desta forma, você estará colocando em prática o desenvolvimento guiado por testes, e garantindo uma cobertura de testes durante sua implementação.
 
+Ao final da Semana os instrutores irão acessar cada repositório e avaliar os seguintes pontos:
+
+- Nome do repositório, branches e commits diários;
+
+- Organização das pastas, arquivos e código;
+
+- O README.md contendo as informações do projeto;
+
+- Instalação e funcionamento dos códigos;
+
+- Métodos robustos na classe calculadora com as 4 operações básicas(adição, subtração, multiplicação e divisão), além de mais duas operações de sua escolha;
+
+- A calculadora deverá contemplar os testes utilizando Pytest(Python);
+
+- A calculadora não deverá utilizar math();
+
+- Métodos robustos na classe calculadora.js;
+
+- Arquivo(s) de teste com testes eficientes;
+
+- Nome das variáveis e métodos;
+
+- Plágio! (Por isso não esqueça das referências, seja da internet, da ajuda de um colega ou mesmo da utilização de uma IA).
+
+- Organização dos scripts
