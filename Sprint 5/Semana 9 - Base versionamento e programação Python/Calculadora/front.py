@@ -1,4 +1,4 @@
-# O Pedro da minha Squad deu a ideia de separar a lógica da parte que executaria o programa.
+# O Pedro da minha Squad deu a ideia de separar a lógica da interface em dois arquivos diferentes.
 
 from calculadora import Calculadora
 
