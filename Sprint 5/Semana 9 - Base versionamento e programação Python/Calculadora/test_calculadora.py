@@ -1,4 +1,5 @@
 import pytest
+from calculadora import Calculadora
 
 @pytest.mark.parametrize("n1_soma, n2_soma, resultado_esperado_soma", [(1, 5, 6), (5, 10, 15), (6, 8, 14)])
 def test_soma(n1_soma, n2_soma, resultado_esperado_soma)
