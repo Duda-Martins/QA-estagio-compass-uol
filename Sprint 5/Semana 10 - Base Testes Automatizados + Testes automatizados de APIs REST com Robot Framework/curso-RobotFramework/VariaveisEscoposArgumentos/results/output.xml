@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-20T16:29:31.530603" rpa="false" schemaversion="5">
+<suite id="s1" name="Tarefa3" source="C:\Users\maria\OneDrive\minha-pasta\Estágio\Sprint 5\Semana 10 - Base Testes Automatizados + Testes automatizados de APIs REST com Robot Framework\curso-RobotFramework\VariaveisEscoposArgumentos\Tarefa3.robot">
+<test id="s1-t1" name="Criar um e-mail" line="9">
+<kw name="Gerar o email">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-05-20T16:29:31.586986" level="INFO">${STRING_ALEATORIA} = dt5NfaT3</msg>
+<var>${STRING_ALEATORIA}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-05-20T16:29:31.586751" elapsed="0.000282"/>
+</kw>
+<kw name="Juntando nomes">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-05-20T16:29:31.588574" level="INFO">${EMAIL_GERADO} = MariaSilvadt5NfaT3@testerobot.com</msg>
+<var>${EMAIL_GERADO}</var>
+<arg>SEPARATOR=</arg>
+<arg>${NOME}</arg>
+<arg>${SOBRENOME}</arg>
+<arg>${STRING}</arg>
+<arg>${DOMINIO}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-05-20T16:29:31.588297" elapsed="0.000315"/>
+</kw>
+<return>
+<value>${EMAIL_GERADO}</value>
+<status status="PASS" start="2025-05-20T16:29:31.588704" elapsed="0.000057"/>
+</return>
+<msg time="2025-05-20T16:29:31.588917" level="INFO">${EMAIL} = MariaSilvadt5NfaT3@testerobot.com</msg>
+<var>${EMAIL}</var>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.sobrenome}</arg>
+<arg>${STRING_ALEATORIA}</arg>
+<arg>@testerobot.com</arg>
+<status status="PASS" start="2025-05-20T16:29:31.587239" elapsed="0.001711"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${\n}O email gerado é: ${EMAIL}.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-20T16:29:31.589067" elapsed="0.000451"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:29:31.585853" elapsed="0.003767"/>
+</kw>
+<status status="PASS" start="2025-05-20T16:29:31.584985" elapsed="0.004996"/>
+</test>
+<doc>Exemplo de uso de variáveis como argumentos em Keywords</doc>
+<status status="PASS" start="2025-05-20T16:29:31.535748" elapsed="0.055782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tarefa3" id="s1" pass="1" fail="0" skip="0">Tarefa3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
