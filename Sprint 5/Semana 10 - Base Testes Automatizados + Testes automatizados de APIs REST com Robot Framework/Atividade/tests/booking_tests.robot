@@ -12,7 +12,27 @@ Cenário 02 Atulização de reserva com sucesso
     Realizar a edição    200
     Verificar se tem o status code correto    200
     Verificar conteúdo da resposta CN2    ${RESPOSTA}    ${body}    ${bookingdates}
-    
+
+Cenário 07 Adiquirindo reservas por ids com sucesso
+    Realizar o GET de reserva    200    ${id}
+    Verificar se tem o status code correto    200
+
+Cenário 08 Atulização parcial de reserva com sucesso
+    Realizar atualização parcial    200
+    Verificar conteúdo da resposta CN8    ${RESPOSTA}    ${edicao_body}    ${body}    ${bookingdates}
+
 Cenário 03 Deleção de reserva com sucesso
-    Realizar a Deleção    201
+    Realizar a Deleção    201    ${id}
     Verificar se tem o status code correto    201
+
+Cenário 04 Adiquirindo ids de todas as reservas com sucesso
+    Realizar o GET por IDs    200
+    Verificar se tem o status code correto    200
+
+Cenário 05 Adiquirindo ids de reservas por nome com sucesso
+    Realizar o GET por nome    200
+    Verificar se tem o status code correto    200
+
+Cenário 06 Adiquirindo ids de reservas por datas com sucesso
+    Realizar o GET por datas    200
+    Verificar se tem o status code correto    200

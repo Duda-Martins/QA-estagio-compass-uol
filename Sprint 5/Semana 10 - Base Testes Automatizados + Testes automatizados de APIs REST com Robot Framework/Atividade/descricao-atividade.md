@@ -33,9 +33,9 @@
 
 > [!NOTE]
 > End-points Booking que só devem ser testados se sobrar tempo:
-> - [ ] GetBookingIds
-> - [ ] PartialUpdateBooking
-> - [ ] GetBooking
+> - [x] GetBookingIds
+> - [x] PartialUpdateBooking
+> - [x] GetBooking
 
 - [x] Não é necessário levantar plano de testes para essa api, apenas praticar com Robot Framework.
 - [x] Você deve criar uma nova branch em seu repositório Git, e versionar diariamente as atualizações no código criado durante esta Sprint.
