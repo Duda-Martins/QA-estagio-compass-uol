@@ -1,6 +1,5 @@
 *** Settings ***
 Library  RequestsLibrary
-Library  String
 Library  Collections
 
 *** Keywords ***
@@ -31,12 +30,13 @@ Realizar a autenticação
 
 
     Set Test Variable    ${RESPOSTA}    ${resposta.json()}
+    Log  ${RESPOSTA}
 
 Criar Sessão
     Create Session    alias=restful-booker    url=https://restful-booker.herokuapp.com
 
-Verificar se deu sucesso 200
-    Log  ${RESPOSTA}
+Verificar se tem o status code correto
+    [Arguments]    ${status_sucesso}
     Status Should Be    200
 
 Verificar se o token foi enviado

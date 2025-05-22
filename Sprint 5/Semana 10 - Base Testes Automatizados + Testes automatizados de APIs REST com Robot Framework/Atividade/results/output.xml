@@ -1,148 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-21T18:30:46.215098" rpa="false" schemaversion="5">
-<suite id="s1" name="Aunth Tests" source="C:\Users\maria\OneDrive\minha-pasta\Estágio\Sprint 5\Semana 10 - Base Testes Automatizados + Testes automatizados de APIs REST com Robot Framework\Atividade\tests\aunth_tests.robot">
-<test id="s1-t1" name="Cenário 01 Login com sucesso" line="5">
-<kw name="Setar usuário e senha" owner="aunth_tests">
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.170591" level="INFO">${username} = admin</msg>
-<arg>${username}</arg>
-<arg>admin</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.169732" elapsed="0.000935"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.171445" level="INFO">${senha_aleatoria} = password123</msg>
-<arg>${senha_aleatoria}</arg>
-<arg>password123</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.170823" elapsed="0.000720"/>
-</kw>
-<status status="PASS" start="2025-05-21T18:30:47.168987" elapsed="0.002653"/>
-</kw>
-<kw name="Realizar a autenticação" owner="aunth_tests">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.173079" level="INFO">${body} = {'username': 'admin', 'password': 'password123'}</msg>
-<var>${body}</var>
-<arg>username=${username}</arg>
-<arg>password=${senha_aleatoria}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.172388" elapsed="0.000728"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.173429" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
-<var>${header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.173249" elapsed="0.000215"/>
-</kw>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-22T14:12:51.365732" rpa="false" schemaversion="5">
+<suite id="s1" name="Ping Tests" source="C:\Users\maria\OneDrive\minha-pasta\Estágio\Sprint 5\Semana 10 - Base Testes Automatizados + Testes automatizados de APIs REST com Robot Framework\Atividade\tests\ping_tests.robot">
+<test id="s1-t1" name="Cenário 01 Ping com sucesso" line="7">
+<kw name="Fazer o Ping" owner="ping_tests">
 <kw name="Criar Sessão" owner="aunth_tests">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-05-21T18:30:47.173995" level="INFO">Creating Session using : alias=restful-booker, url=https://restful-booker.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-05-22T14:12:52.824114" level="INFO">Creating Session using : alias=restful-booker, url=https://restful-booker.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=restful-booker</arg>
 <arg>url=https://restful-booker.herokuapp.com</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-05-21T18:30:47.173847" elapsed="0.000359"/>
+<status status="PASS" start="2025-05-22T14:12:52.823890" elapsed="0.000583"/>
 </kw>
-<status status="PASS" start="2025-05-21T18:30:47.173598" elapsed="0.000685"/>
+<status status="PASS" start="2025-05-22T14:12:52.823013" elapsed="0.001577"/>
 </kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-05-21T18:30:47.790604" level="INFO">POST Request : url=https://restful-booker.herokuapp.com/auth 
- path_url=/auth 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '48'} 
- body=b'{"username": "admin", "password": "password123"}' 
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-05-22T14:12:53.602932" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/ping 
+ path_url=/ping 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
  </msg>
-<msg time="2025-05-21T18:30:47.790754" level="INFO">POST Response : url=https://restful-booker.herokuapp.com/auth 
- status=200, reason=OK 
- headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1747863036&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=SnNmkk%2BI9aoHn%2FLFHzFZcSeAXtPgoUuxhVHTPFMGlHE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1747863036&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=SnNmkk%2BI9aoHn%2FLFHzFZcSeAXtPgoUuxhVHTPFMGlHE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Etag': 'W/"1b-LCJxZqHh+Hb8byAb9rTdT3qeHpU"', 'Date': 'Wed, 21 May 2025 21:30:36 GMT', 'Via': '1.1 vegur'} 
- body={"token":"4f09ee0c9ff0c40"} 
+<msg time="2025-05-22T14:12:53.603088" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/ping 
+ status=201, reason=Created 
+ headers={'Content-Length': '7', 'Content-Type': 'text/plain; charset=utf-8', 'Date': 'Thu, 22 May 2025 17:12:42 GMT', 'Etag': 'W/"7-rM9AyJuqT6iOan/xHh+AW+7K/T8"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=mYI3%2Bt%2FYvdHX5ngOA1vP5w6wy2gXyuOZs%2ByCEGoUOQI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1747933962"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=mYI3%2Bt%2FYvdHX5ngOA1vP5w6wy2gXyuOZs%2ByCEGoUOQI%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1747933962"', 'Server': 'Heroku', 'Via': '1.1 heroku-router', 'X-Powered-By': 'Express'} 
+ body=Created 
  </msg>
-<msg time="2025-05-21T18:30:47.790849" level="INFO">C:\Program Files\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-05-22T14:12:53.603193" level="INFO">C:\Program Files\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-05-21T18:30:47.791750" level="INFO">${resposta} = &lt;Response [200]&gt;</msg>
-<var>${resposta}</var>
 <arg>alias=restful-booker</arg>
-<arg>url=/auth</arg>
-<arg>json=${body}</arg>
+<arg>url=/ping</arg>
 <arg>expected_status=${status_code_desejado}</arg>
-<arg>headers=${header}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.174384" elapsed="0.617435"/>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-05-22T14:12:52.824722" elapsed="0.779102"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.793053" level="INFO">{'token': '4f09ee0c9ff0c40'}</msg>
-<arg>${resposta.json()}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.792132" elapsed="0.001020"/>
+<arg>201</arg>
+<status status="PASS" start="2025-05-22T14:12:52.822223" elapsed="0.781790"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${resposta.json()}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.793365" elapsed="0.001056"/>
-</kw>
-<kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.795256" level="INFO">${RESPOSTA} = {'token': '4f09ee0c9ff0c40'}</msg>
-<arg>${RESPOSTA}</arg>
-<arg>${resposta.json()}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.794650" elapsed="0.000680"/>
-</kw>
-<arg>${username}</arg>
-<arg>${senha_aleatoria}</arg>
-<arg>200</arg>
-<status status="PASS" start="2025-05-21T18:30:47.172000" elapsed="0.623421"/>
-</kw>
-<kw name="Verificar se deu sucesso 200" owner="aunth_tests">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.796214" level="INFO">{'token': '4f09ee0c9ff0c40'}</msg>
-<arg>${RESPOSTA}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.796052" elapsed="0.000223"/>
-</kw>
+<kw name="Verificar se tem o status code correto" owner="aunth_tests">
 <kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2025-05-22T14:12:53.604958" level="FAIL">Url: https://restful-booker.herokuapp.com/ping Expected status: 201 != 200</msg>
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.796402" elapsed="0.000127"/>
+<status status="FAIL" start="2025-05-22T14:12:53.604739" elapsed="0.015567">Url: https://restful-booker.herokuapp.com/ping Expected status: 201 != 200</status>
 </kw>
-<status status="PASS" start="2025-05-21T18:30:47.795723" elapsed="0.000878"/>
+<arg>201</arg>
+<status status="FAIL" start="2025-05-22T14:12:53.604423" elapsed="0.016085">Url: https://restful-booker.herokuapp.com/ping Expected status: 201 != 200</status>
 </kw>
-<kw name="Verificar se o token foi enviado" owner="aunth_tests">
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${RESPOSTA}</arg>
-<arg>token</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.797118" elapsed="0.000190"/>
-</kw>
-<status status="PASS" start="2025-05-21T18:30:47.796837" elapsed="0.000550"/>
-</kw>
-<kw name="Guardar o token" owner="aunth_tests">
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-05-21T18:30:47.799319" level="INFO">@{TOKEN} = [ Get Value From Json | {'token': '4f09ee0c9ff0c40'} | token ]</msg>
-<arg>@{TOKEN}</arg>
-<arg>Get Value From Json</arg>
-<arg>${RESPOSTA}</arg>
-<arg>token</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.797912" elapsed="0.001497"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${TOKEN}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T18:30:47.799571" elapsed="0.000424"/>
-</kw>
-<status status="PASS" start="2025-05-21T18:30:47.797615" elapsed="0.002533"/>
-</kw>
-<status status="PASS" start="2025-05-21T18:30:47.168089" elapsed="0.632423"/>
+<status status="FAIL" start="2025-05-22T14:12:52.821147" elapsed="0.799815">Url: https://restful-booker.herokuapp.com/ping Expected status: 201 != 200</status>
 </test>
-<status status="PASS" start="2025-05-21T18:30:46.219086" elapsed="1.582808"/>
+<doc>Testes para o end-point Ping</doc>
+<status status="FAIL" start="2025-05-22T14:12:51.370092" elapsed="2.253679"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Aunth Tests" id="s1" pass="1" fail="0" skip="0">Aunth Tests</stat>
+<stat name="Ping Tests" id="s1" pass="0" fail="1" skip="0">Ping Tests</stat>
 </suite>
 </statistics>
 <errors>
