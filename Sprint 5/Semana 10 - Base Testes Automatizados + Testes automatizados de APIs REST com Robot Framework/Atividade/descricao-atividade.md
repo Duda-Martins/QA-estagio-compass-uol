@@ -20,14 +20,16 @@
 
 - [ ] Tente praticar ao menos um verbo (GET, POST, PUT, DELETE) de cada rota disponível na API escolhida.
 > [!NOTE]
-> Começar com o end-point Auth e depois no Ping.
+> Começar com o end-point:
+> - [x] Auth
+> - [x] Ping.
 
 - [ ] Tente focar nas requests que necessitam de token de autorização para reforçar o aprendizado sobre autenticação.
 > [!NOTE]
 > End-points Booking a serem testados:
-> - [ ] CreateBooking
-> - [ ] UpdateBooking
-> - [ ] DeleteBooking
+> - [x] CreateBooking
+> - [x] UpdateBooking
+> - [x] DeleteBooking
 
 > [!NOTE]
 > End-points Booking que só devem ser testados se sobrar tempo:

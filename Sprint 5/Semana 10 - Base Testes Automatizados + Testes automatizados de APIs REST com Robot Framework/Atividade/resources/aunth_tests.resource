@@ -43,5 +43,4 @@ Verificar se o token foi enviado
     Dictionary Should Contain Key   ${RESPOSTA}  token
 
 Guardar o token
-    Set Global Variable    @{TOKEN}    Get Value From Json    ${RESPOSTA}    token
-    log To Console    @{TOKEN}
+    Set Suite Variable    ${TOKEN}    ${resposta}[token]
