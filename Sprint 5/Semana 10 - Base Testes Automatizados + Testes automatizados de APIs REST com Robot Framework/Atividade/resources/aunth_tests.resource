@@ -37,7 +37,7 @@ Criar Sessão
 
 Verificar se tem o status code correto
     [Arguments]    ${status_sucesso}
-    Status Should Be    200
+    Status Should Be    ${status_sucesso}
 
 Verificar se o token foi enviado
     Dictionary Should Contain Key   ${RESPOSTA}  token
