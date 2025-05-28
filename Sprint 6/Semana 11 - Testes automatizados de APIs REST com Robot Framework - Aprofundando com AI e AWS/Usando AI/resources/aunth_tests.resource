@@ -4,6 +4,7 @@ Documentation    Resource file containing authentication related keywords and va
 ...              and session creation for the Restful-Booker API.
 Library  RequestsLibrary
 Library  Collections
+Resource  common_variables.resource
 
 *** Keywords ***
 Setar usuário e senha
@@ -23,7 +24,7 @@ Realizar a autenticação
     ...    password=${senha_aleatoria}
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
 
     Criar Sessão
 

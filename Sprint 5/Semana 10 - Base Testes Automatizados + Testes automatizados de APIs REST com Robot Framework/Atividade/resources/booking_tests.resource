@@ -2,7 +2,6 @@
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
-Resource  common_variables.resource
 
 *** Keywords ***
 Realizar reserva
@@ -25,7 +24,7 @@ Realizar reserva
     Set Test Variable    &{body}
 
     ${header}    Create Dictionary
-    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Content-Type=application/json
 
     Criar Sessão
 
@@ -80,8 +79,8 @@ Realizar a edição
     Set Test Variable    &{body}
 
     &{header}    Create Dictionary
-    ...    Content-Type=${CONTENT_TYPE_JSON}
-    ...    Accept=${CONTENT_TYPE_JSON}
+    ...    Content-Type=application/json
+    ...    Accept=application/json
     ...    Cookie=token=${TOKEN}
 
     Criar Sessão
@@ -118,7 +117,7 @@ Realizar a Deleção
     Realizar a autenticação    ${username}    ${senha_aleatoria}    200
 
     ${header}    Create Dictionary
-    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Content-Type=application/json
     ...    Cookie=token=${TOKEN}
 
     Criar Sessão
@@ -156,7 +155,6 @@ Realizar o GET por nome
     Set Test Variable    ${RESPOSTA}    ${resposta.json()}
     Log    ${RESPOSTA}
     Log to Console    ${RESPOSTA}
-
 Realizar o GET por datas
     [Arguments]    ${status_code_desejado}
 
@@ -203,8 +201,8 @@ Realizar atualização parcial
     # Set Test Variable    &{bookingdates}
 
     ${header}    Create Dictionary
-    ...    Content-Type=${CONTENT_TYPE_JSON}
-    ...    Accept=${CONTENT_TYPE_JSON}
+    ...    Content-Type=application/json
+    ...    Accept=application/json
     ...    Cookie=token=${TOKEN}
 
     ${editado_body}    Create Dictionary

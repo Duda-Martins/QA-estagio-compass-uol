@@ -5,6 +5,7 @@ Documentation    Resource file containing keywords for booking-related operation
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
+Resource  common_variables.resource
 
 *** Keywords ***
 Realizar reserva
@@ -30,7 +31,7 @@ Realizar reserva
     Set Test Variable    &{body}
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
 
     Criar Sessão
 
@@ -87,8 +88,8 @@ Realizar a edição
     Set Test Variable    &{body}
 
     &{header}    Create Dictionary
-    ...    Content-Type=application/json
-    ...    Accept=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Accept=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
     Criar Sessão
@@ -126,7 +127,7 @@ Realizar a Deleção
     Realizar a autenticação    ${username}    ${senha_aleatoria}    200
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
     Criar Sessão
@@ -209,8 +210,8 @@ Realizar atualização parcial
     Guardar o token
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
-    ...    Accept=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Accept=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
     ${editado_body}    Create Dictionary
