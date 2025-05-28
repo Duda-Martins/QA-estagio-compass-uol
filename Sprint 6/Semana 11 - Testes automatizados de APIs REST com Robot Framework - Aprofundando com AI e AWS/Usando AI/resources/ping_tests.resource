@@ -5,6 +5,7 @@ Documentation    Resource file containing keywords for health check operations.
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
+Resource  common/common_keywords.resource
 
 *** Keywords ***
 Fazer o Ping

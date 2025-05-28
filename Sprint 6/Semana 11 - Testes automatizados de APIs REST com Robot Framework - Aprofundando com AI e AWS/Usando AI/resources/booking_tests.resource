@@ -6,6 +6,7 @@ Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
 Resource  common/common_variables.resource
+Resource  common/common_keywords.resource
 
 *** Keywords ***
 Realizar reserva

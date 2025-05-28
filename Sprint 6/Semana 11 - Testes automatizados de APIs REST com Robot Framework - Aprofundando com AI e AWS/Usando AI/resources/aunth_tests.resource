@@ -5,6 +5,7 @@ Documentation    Resource file containing authentication related keywords and va
 Library  RequestsLibrary
 Library  Collections
 Resource  common/common_variables.resource
+Resource  common/common_keywords.resource
 
 *** Keywords ***
 Setar usuário e senha
@@ -41,15 +42,6 @@ Realizar a autenticação
 
     Set Test Variable    ${RESPOSTA}    ${resposta.json()}
     Log  ${RESPOSTA}
-
-Criar Sessão
-    [Documentation]    Creates a session with the Restful-Booker API
-    Create Session    alias=restful-booker    url=${BASE_URL}
-
-Verificar se tem o status code correto
-    [Documentation]    Verifies if the response has the expected status code
-    [Arguments]    ${status_sucesso}
-    Status Should Be    ${status_sucesso}
 
 Verificar se o token foi enviado
     [Documentation]    Verifies if the authentication response contains a token
