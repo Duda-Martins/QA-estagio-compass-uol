@@ -1,32 +1,40 @@
 *** Settings ***
+Documentation    Resource file containing keywords for booking-related operations.
+...              Provides functionality for creating, updating, deleting and retrieving
+...              bookings through the Restful-Booker API.
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
+Resource  common/common_variables.resource
+Resource  common/common_keywords.resource
 
 *** Keywords ***
 Realizar reserva
+    [Documentation]    Creates a new booking with predefined test data
+    ...               Args:
+    ...               - status_code_desejado: Expected HTTP status code
     [Arguments]    ${status_code_desejado}
 
     &{bookingdates}    Create Dictionary
-    ...    checkin=2025-12-14
-    ...    checkout=2026-01-14
+    ...    checkin=${DEFAULT_CHECKIN}
+    ...    checkout=${DEFAULT_CHECKOUT}
 
     Set Test Variable    &{bookingdates}
 
     &{body}    Create Dictionary
-    ...    firstname=Testum
-    ...    lastname=Bookingum
-    ...    totalprice=201
-    ...    depositpaid=${True}
+    ...    firstname=${DEFAULT_FIRSTNAME}
+    ...    lastname=${DEFAULT_LASTNAME}
+    ...    totalprice=${DEFAULT_TOTALPRICE}
+    ...    depositpaid=${DEFAULT_DEPOSITPAID}
     ...    bookingdates=${bookingdates}
-    ...    additionalneeds='Milk allergy'
+    ...    additionalneeds=${DEFAULT_ADDITIONALNEEDS}
 
     Set Test Variable    &{body}
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  POST On Session
     ...          alias=restful-booker
@@ -42,6 +50,7 @@ Realizar reserva
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN1
+    [Documentation]    Verifies the content of a booking creation response
     [Arguments]    ${RESPOSTA}    ${body}    ${bookingdates}
 
     Dictionary Should Contain Key    ${RESPOSTA}    bookingid
@@ -56,6 +65,7 @@ Verificar conteúdo da resposta CN1
     Dictionary Should Contain Item    ${RESPOSTA}[booking]    additionalneeds    ${body.additionalneeds}
 
 Realizar a edição
+    [Documentation]    Updates an existing booking with new test data
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
@@ -63,27 +73,27 @@ Realizar a edição
     Guardar o token
 
     &{bookingdates}    Create Dictionary
-    ...    checkin=2025-12-26
-    ...    checkout=2026-01-26
+    ...    checkin=${UPDATED_CHECKIN}
+    ...    checkout=${UPDATED_CHECKOUT}
 
     Set Test Variable    &{bookingdates}
 
     &{body}    Create Dictionary
-    ...    firstname=Testdois
-    ...    lastname=Bookingdois
-    ...    totalprice=202
-    ...    depositpaid=${False}
+    ...    firstname=${UPDATED_FIRSTNAME}
+    ...    lastname=${UPDATED_LASTNAME}
+    ...    totalprice=${UPDATED_TOTALPRICE}
+    ...    depositpaid=${UPDATED_DEPOSITPAID}
     ...    bookingdates=${bookingdates}
-    ...    additionalneeds=Milk allergy
+    ...    additionalneeds=${DEFAULT_ADDITIONALNEEDS}
 
     Set Test Variable    &{body}
 
     &{header}    Create Dictionary
-    ...    Content-Type=application/json
-    ...    Accept=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Accept=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  PUT On Session
     ...          alias=restful-booker
@@ -97,7 +107,7 @@ Realizar a edição
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN2
-
+    [Documentation]    Verifies the content of a booking update response
     [Arguments]    ${RESPOSTA}    ${body}    ${bookingdates}
 
     Dictionary Should Contain Item    ${RESPOSTA}    firstname    ${body.firstname}
@@ -110,6 +120,7 @@ Verificar conteúdo da resposta CN2
     Dictionary Should Contain Item    ${RESPOSTA}    additionalneeds    ${body.additionalneeds}
 
 Realizar a Deleção
+    [Documentation]    Deletes an existing booking
     [Arguments]    ${status_code_desejado}
     Realizar reserva    200
 
@@ -117,10 +128,10 @@ Realizar a Deleção
     Realizar a autenticação    ${username}    ${senha_aleatoria}    200
 
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  DELETE On Session
     ...          alias=restful-booker
@@ -129,23 +140,23 @@ Realizar a Deleção
     ...          headers=${header}
 
 Realizar o GET por IDs
+    [Documentation]    Retrieves all booking IDs
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
     ...          url=/booking
     ...          expected_status=${status_code_desejado}
 
-    Set Test Variable    ${RESPOSTA}    ${resposta.json()}
-    # Log    ${RESPOSTA}
-    # Log to Console    ${RESPOSTA}
+    Set Test Variable    @{RESPOSTA}    ${resposta.json()}    Log    @{RESPOSTA}
 
 Realizar o GET por nome
+    [Documentation]    Retrieves bookings filtered by first and last name
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -155,10 +166,12 @@ Realizar o GET por nome
     Set Test Variable    ${RESPOSTA}    ${resposta.json()}
     Log    ${RESPOSTA}
     Log to Console    ${RESPOSTA}
+
 Realizar o GET por datas
+    [Documentation]    Retrieves bookings filtered by check-in and check-out dates
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -170,13 +183,14 @@ Realizar o GET por datas
     Log to Console    ${RESPOSTA}
 
 Realizar o GET de reserva
+    [Documentation]    Retrieves a specific booking by ID
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
     Realizar a autenticação    ${username}    ${senha_aleatoria}    ${status_code_desejado}
     Guardar o token
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -188,30 +202,25 @@ Realizar o GET de reserva
     Log to Console    ${RESPOSTA}
 
 Realizar atualização parcial
+    [Documentation]    Performs a partial update of a booking
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
     Realizar a autenticação    ${username}    ${senha_aleatoria}    ${status_code_desejado}
     Guardar o token
 
-    # &{bookingdates}    Create Dictionary
-    # ...    checkin=2025-12-14
-    # ...    checkout=2026-01-14
-
-    # Set Test Variable    &{bookingdates}
-
     ${header}    Create Dictionary
-    ...    Content-Type=application/json
-    ...    Accept=application/json
+    ...    Content-Type=${CONTENT_TYPE_JSON}
+    ...    Accept=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
     ${editado_body}    Create Dictionary
-    ...    firstname=Testoito
-    ...    depositpaid=${False}
+    ...    firstname=${PARTIAL_UPDATE_FIRSTNAME}
+    ...    depositpaid=${PARTIAL_UPDATE_DEPOSITPAID}
 
     Set Test Variable    ${editado_body}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  PATCH On Session
     ...          alias=restful-booker
@@ -225,6 +234,7 @@ Realizar atualização parcial
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN8
+    [Documentation]    Verifies the content of a partial update response
     [Arguments]    ${RESPOSTA}    ${editado_body}    ${body}    ${bookingdates}
 
     Log    ${bookingdates}
