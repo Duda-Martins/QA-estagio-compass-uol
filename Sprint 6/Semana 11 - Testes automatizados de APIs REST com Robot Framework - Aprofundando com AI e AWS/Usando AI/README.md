@@ -1,17 +1,36 @@
-# 📝 Prática com API Restful-Booker + Code Review em Squad
+## 📝 AmazonQ Integration
 
 ## 📌 Descrição da Atividade
 
-Cada integrante deverá iniciao um projeto do zero para praticar testes automatizados utilizando **Robot Framework** em uma API REST. Ao final da prática individual, a Squad realizou uma dinâmica de **Code Review** colaborativo, promovendo a troca de feedbacks técnicos.
+### Processo de Implementação
+1. **Criação de Nova Branch**
+   - Criar uma nova branch para implementações com AmazonQ
+
+2. **Desenvolvimento Assistido**
+   - Utilizar AmazonQ para suporte na implementação dos testes
+   - Documentar as interações e sugestões relevantes
+   - Implementar melhorias sugeridas pela ferramenta
+
+3. **Avaliação de Efetividade**
+   - Documentar pontos onde o AmazonQ foi efetivo:
+     - Sugestões de implementação
+     - Identificação de padrões
+     - Otimização de código
+   - Registrar limitações encontradas:
+     - Áreas onde a ferramenta não foi eficaz
+     - Desafios na integração
+     - Pontos de melhoria necessários
+
+4. **Merge e Compartilhamento**
+   - Realizar merge da branch feature para main
+   - Discutir resultados e aprendizados em grupo
 
 ---
 
 ## 🎯 Objetivos
 
-- Reforçar conceitos de testes automatizados em APIs REST utilizando o Robot Framework.
-- Praticar autenticação e consumo de endpoints protegidos com tokens.
-- Estimular o versionamento diário em branches Git.
-- Aplicar boas práticas de revisão de código em ambiente colaborativo.
+- Objetivo da Integração
+  - Complementar a implementação dos testes automatizados utilizando o AmazonQ como ferramenta de suporte para aprimorar a qualidade e eficiência do desenvolvimento.
 
 ---
 
@@ -20,16 +39,23 @@ Cada integrante deverá iniciao um projeto do zero para praticar testes automati
 - Automação com Robot Framework
   - Testes realizados utilizando a API [Restful-Booker](https://restful-booker.herokuapp.com/apidoc/index.html).
   - Versionamento feito diariamente em branch separada no Git.
+  - Atualizações e melhorias feitas pela IA.
 
-- Code Review em Squad
-  - Relatório contendo:
-    1. Nome de quem realizou o Code Review.
-    2. Nome do autor do código revisado.
-    3. Link do repositório e branch analisada.
-    4. Pontos positivos, melhorias sugeridas e observações técnicas.
+- Relatório de Avaliação de Efetividade
+ - Documentar pontos onde o AmazonQ foi efetivo
+ - Registrar limitações encontradas
 
 ---
 
 ## 📂 Arquivos Relacionados no Repositório
 
-Os arquivos relacionados a esta atividade estão localizados na pasta.
+Os arquivos relacionados a esta atividade estão organizados da seguinte forma:
+
+```
+└── tests/                  # Arquivos de teste Robot Framework
+    ├── aunth_tests.robot   # Testes de autenticação
+    ├── booking_tests.robot # Testes de reservas
+    └── ping_tests.robot    # Testes de healthcheck
+└── resources/             # Recursos compartilhados
+└── results/              # Relatórios de execução
+```
