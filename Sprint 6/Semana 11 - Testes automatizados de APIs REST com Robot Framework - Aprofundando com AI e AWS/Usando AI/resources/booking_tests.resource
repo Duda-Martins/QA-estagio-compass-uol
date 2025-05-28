@@ -1,10 +1,16 @@
 *** Settings ***
+Documentation    Resource file containing keywords for booking-related operations.
+...              Provides functionality for creating, updating, deleting and retrieving
+...              bookings through the Restful-Booker API.
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
 
 *** Keywords ***
 Realizar reserva
+    [Documentation]    Creates a new booking with predefined test data
+    ...               Args:
+    ...               - status_code_desejado: Expected HTTP status code
     [Arguments]    ${status_code_desejado}
 
     &{bookingdates}    Create Dictionary
@@ -42,6 +48,7 @@ Realizar reserva
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN1
+    [Documentation]    Verifies the content of a booking creation response
     [Arguments]    ${RESPOSTA}    ${body}    ${bookingdates}
 
     Dictionary Should Contain Key    ${RESPOSTA}    bookingid
@@ -56,6 +63,7 @@ Verificar conteúdo da resposta CN1
     Dictionary Should Contain Item    ${RESPOSTA}[booking]    additionalneeds    ${body.additionalneeds}
 
 Realizar a edição
+    [Documentation]    Updates an existing booking with new test data
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
@@ -97,7 +105,7 @@ Realizar a edição
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN2
-
+    [Documentation]    Verifies the content of a booking update response
     [Arguments]    ${RESPOSTA}    ${body}    ${bookingdates}
 
     Dictionary Should Contain Item    ${RESPOSTA}    firstname    ${body.firstname}
@@ -110,6 +118,7 @@ Verificar conteúdo da resposta CN2
     Dictionary Should Contain Item    ${RESPOSTA}    additionalneeds    ${body.additionalneeds}
 
 Realizar a Deleção
+    [Documentation]    Deletes an existing booking
     [Arguments]    ${status_code_desejado}
     Realizar reserva    200
 
@@ -129,6 +138,7 @@ Realizar a Deleção
     ...          headers=${header}
 
 Realizar o GET por IDs
+    [Documentation]    Retrieves all booking IDs
     [Arguments]    ${status_code_desejado}
 
     Criar Sessão
@@ -138,11 +148,11 @@ Realizar o GET por IDs
     ...          url=/booking
     ...          expected_status=${status_code_desejado}
 
-    Set Test Variable    ${RESPOSTA}    ${resposta.json()}
-    # Log    ${RESPOSTA}
-    # Log to Console    ${RESPOSTA}
+    Set Test Variable    ${RESPOSTA}    ${resposta.json()}    Log    ${RESPOSTA}
+    Log to Console    ${RESPOSTA}
 
 Realizar o GET por nome
+    [Documentation]    Retrieves bookings filtered by first and last name
     [Arguments]    ${status_code_desejado}
 
     Criar Sessão
@@ -155,7 +165,9 @@ Realizar o GET por nome
     Set Test Variable    ${RESPOSTA}    ${resposta.json()}
     Log    ${RESPOSTA}
     Log to Console    ${RESPOSTA}
+
 Realizar o GET por datas
+    [Documentation]    Retrieves bookings filtered by check-in and check-out dates
     [Arguments]    ${status_code_desejado}
 
     Criar Sessão
@@ -170,6 +182,7 @@ Realizar o GET por datas
     Log to Console    ${RESPOSTA}
 
 Realizar o GET de reserva
+    [Documentation]    Retrieves a specific booking by ID
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
@@ -188,17 +201,12 @@ Realizar o GET de reserva
     Log to Console    ${RESPOSTA}
 
 Realizar atualização parcial
+    [Documentation]    Performs a partial update of a booking
     [Arguments]    ${status_code_desejado}
 
     Setar usuário e senha
     Realizar a autenticação    ${username}    ${senha_aleatoria}    ${status_code_desejado}
     Guardar o token
-
-    # &{bookingdates}    Create Dictionary
-    # ...    checkin=2025-12-14
-    # ...    checkout=2026-01-14
-
-    # Set Test Variable    &{bookingdates}
 
     ${header}    Create Dictionary
     ...    Content-Type=application/json
@@ -225,6 +233,7 @@ Realizar atualização parcial
     Log to Console    ${RESPOSTA}
 
 Verificar conteúdo da resposta CN8
+    [Documentation]    Verifies the content of a partial update response
     [Arguments]    ${RESPOSTA}    ${editado_body}    ${body}    ${bookingdates}
 
     Log    ${bookingdates}
