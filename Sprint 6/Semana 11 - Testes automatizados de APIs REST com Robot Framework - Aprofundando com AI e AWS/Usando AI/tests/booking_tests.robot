@@ -9,6 +9,8 @@ Documentation    Test suite for booking management functionality.
 Resource  ../resources/aunth_tests.resource
 Resource    ../resources/booking_tests.resource
 
+Suite Setup     Criar Sessão
+
 *** Test Cases ***
 Cenário 01 Criação de reserva com sucesso
     [Documentation]    Tests successful creation of a new booking

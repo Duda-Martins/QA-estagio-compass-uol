@@ -34,7 +34,7 @@ Realizar reserva
     ${header}    Create Dictionary
     ...    Content-Type=${CONTENT_TYPE_JSON}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  POST On Session
     ...          alias=restful-booker
@@ -93,7 +93,7 @@ Realizar a edição
     ...    Accept=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  PUT On Session
     ...          alias=restful-booker
@@ -131,7 +131,7 @@ Realizar a Deleção
     ...    Content-Type=${CONTENT_TYPE_JSON}
     ...    Cookie=token=${TOKEN}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  DELETE On Session
     ...          alias=restful-booker
@@ -143,21 +143,20 @@ Realizar o GET por IDs
     [Documentation]    Retrieves all booking IDs
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
     ...          url=/booking
     ...          expected_status=${status_code_desejado}
 
-    Set Test Variable    ${RESPOSTA}    ${resposta.json()}    Log    ${RESPOSTA}
-    Log to Console    ${RESPOSTA}
+    Set Test Variable    @{RESPOSTA}    ${resposta.json()}    Log    @{RESPOSTA}
 
 Realizar o GET por nome
     [Documentation]    Retrieves bookings filtered by first and last name
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -172,7 +171,7 @@ Realizar o GET por datas
     [Documentation]    Retrieves bookings filtered by check-in and check-out dates
     [Arguments]    ${status_code_desejado}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -191,7 +190,7 @@ Realizar o GET de reserva
     Realizar a autenticação    ${username}    ${senha_aleatoria}    ${status_code_desejado}
     Guardar o token
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  GET On Session
     ...          alias=restful-booker
@@ -221,7 +220,7 @@ Realizar atualização parcial
 
     Set Test Variable    ${editado_body}
 
-    Criar Sessão
+    # Criar Sessão
 
     ${resposta}  PATCH On Session
     ...          alias=restful-booker

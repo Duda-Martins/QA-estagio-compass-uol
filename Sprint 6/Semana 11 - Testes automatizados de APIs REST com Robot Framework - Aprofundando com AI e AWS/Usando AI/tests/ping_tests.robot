@@ -4,7 +4,6 @@ Documentation    Test suite for API health check functionality.
 ...              - The API is up and running
 ...              - Returns correct status code
 Resource  ../resources/ping_tests.resource
-Resource  ../resources/aunth_tests.resource
 
 *** Test Cases ***
 Cenário 01 Ping com sucesso

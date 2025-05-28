@@ -3,8 +3,6 @@ Documentation    Resource file containing keywords for health check operations.
 ...              Provides functionality for checking the API's health status
 ...              through the ping endpoint.
 Library  RequestsLibrary
-Library  Collections
-Resource  ../resources/aunth_tests.resource
 Resource  common/common_keywords.resource
 
 *** Keywords ***
