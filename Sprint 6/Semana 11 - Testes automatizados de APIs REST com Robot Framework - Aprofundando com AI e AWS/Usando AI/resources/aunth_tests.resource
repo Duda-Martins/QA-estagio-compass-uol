@@ -4,7 +4,7 @@ Documentation    Resource file containing authentication related keywords and va
 ...              and session creation for the Restful-Booker API.
 Library  RequestsLibrary
 Library  Collections
-Resource  common_variables.resource
+Resource  common/common_variables.resource
 
 *** Keywords ***
 Setar usuário e senha

@@ -5,7 +5,7 @@ Documentation    Resource file containing keywords for booking-related operation
 Library  RequestsLibrary
 Library  Collections
 Resource  ../resources/aunth_tests.resource
-Resource  common_variables.resource
+Resource  common/common_variables.resource
 
 *** Keywords ***
 Realizar reserva
