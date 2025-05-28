@@ -9,8 +9,8 @@ Resource  common_variables.resource
 *** Keywords ***
 Setar usuário e senha
     [Documentation]    Sets up test variables for username and password
-    Set Test Variable    ${username}    admin
-    Set Test Variable    ${senha_aleatoria}    password123
+    Set Test Variable    ${username}    ${DEFAULT_USERNAME}
+    Set Test Variable    ${senha_aleatoria}    ${DEFAULT_PASSWORD}
 
 Realizar a autenticação
     [Documentation]    Performs authentication with the API using provided credentials
@@ -44,7 +44,7 @@ Realizar a autenticação
 
 Criar Sessão
     [Documentation]    Creates a session with the Restful-Booker API
-    Create Session    alias=restful-booker    url=https://restful-booker.herokuapp.com
+    Create Session    alias=restful-booker    url=${BASE_URL}
 
 Verificar se tem o status code correto
     [Documentation]    Verifies if the response has the expected status code

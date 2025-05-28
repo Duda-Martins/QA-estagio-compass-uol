@@ -15,18 +15,18 @@ Realizar reserva
     [Arguments]    ${status_code_desejado}
 
     &{bookingdates}    Create Dictionary
-    ...    checkin=2025-12-14
-    ...    checkout=2026-01-14
+    ...    checkin=${DEFAULT_CHECKIN}
+    ...    checkout=${DEFAULT_CHECKOUT}
 
     Set Test Variable    &{bookingdates}
 
     &{body}    Create Dictionary
-    ...    firstname=Testum
-    ...    lastname=Bookingum
-    ...    totalprice=201
-    ...    depositpaid=${True}
+    ...    firstname=${DEFAULT_FIRSTNAME}
+    ...    lastname=${DEFAULT_LASTNAME}
+    ...    totalprice=${DEFAULT_TOTALPRICE}
+    ...    depositpaid=${DEFAULT_DEPOSITPAID}
     ...    bookingdates=${bookingdates}
-    ...    additionalneeds='Milk allergy'
+    ...    additionalneeds=${DEFAULT_ADDITIONALNEEDS}
 
     Set Test Variable    &{body}
 
@@ -72,18 +72,18 @@ Realizar a edição
     Guardar o token
 
     &{bookingdates}    Create Dictionary
-    ...    checkin=2025-12-26
-    ...    checkout=2026-01-26
+    ...    checkin=${UPDATED_CHECKIN}
+    ...    checkout=${UPDATED_CHECKOUT}
 
     Set Test Variable    &{bookingdates}
 
     &{body}    Create Dictionary
-    ...    firstname=Testdois
-    ...    lastname=Bookingdois
-    ...    totalprice=202
-    ...    depositpaid=${False}
+    ...    firstname=${UPDATED_FIRSTNAME}
+    ...    lastname=${UPDATED_LASTNAME}
+    ...    totalprice=${UPDATED_TOTALPRICE}
+    ...    depositpaid=${UPDATED_DEPOSITPAID}
     ...    bookingdates=${bookingdates}
-    ...    additionalneeds=Milk allergy
+    ...    additionalneeds=${DEFAULT_ADDITIONALNEEDS}
 
     Set Test Variable    &{body}
 
@@ -215,8 +215,8 @@ Realizar atualização parcial
     ...    Cookie=token=${TOKEN}
 
     ${editado_body}    Create Dictionary
-    ...    firstname=Testoito
-    ...    depositpaid=${False}
+    ...    firstname=${PARTIAL_UPDATE_FIRSTNAME}
+    ...    depositpaid=${PARTIAL_UPDATE_DEPOSITPAID}
 
     Set Test Variable    ${editado_body}
 
