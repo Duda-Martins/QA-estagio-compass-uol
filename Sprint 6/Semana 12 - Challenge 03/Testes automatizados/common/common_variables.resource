@@ -3,7 +3,7 @@ Documentation    Variáveis comuns.
 
 *** Variables ***
 # API Base URL
-${BASE_URL}    https://serverest.dev
+${BASE_URL}    13.220.179.107
 
 ${SENHA_PADRAO}    12345
 ${STATUS_REQ}    any
