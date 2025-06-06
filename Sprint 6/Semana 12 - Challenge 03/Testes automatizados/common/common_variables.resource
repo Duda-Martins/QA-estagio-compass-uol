@@ -3,7 +3,8 @@ Documentation    Variáveis comuns.
 
 *** Variables ***
 # API Base URL
-${BASE_URL}    http://13.220.179.107:3000
+${IPV4}        13.220.179.107
+${BASE_URL}    http://${IPV4}:3000
 
 ${SENHA_PADRAO}    12345
 ${STATUS_REQ}    any
