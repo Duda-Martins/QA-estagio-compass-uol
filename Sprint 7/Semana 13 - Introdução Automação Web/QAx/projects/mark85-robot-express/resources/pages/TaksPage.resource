@@ -20,7 +20,7 @@ Task shoud be complete
     ...    visible
     ...    5
 
-    Get Style    ${element}    text-decoration-line    line-through
+    Get Style    ${element}    text-decoration-line    equal    line-through
 
 Mark task as completed
     [Arguments]    ${task_name}
